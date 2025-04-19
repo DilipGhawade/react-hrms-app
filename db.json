@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Dilip",
+      "password": "12345",
+      "email": "dilip@gmail.com",
+      "role": "admin",
+      "phoneno": "9807909090",
+      "department": "it",
+      "address": "pune"
+    },
+    {
+      "id": "114b",
+      "name": "Nidisha",
+      "password": "12345",
+      "role": "",
+      "phoneno": "7090909090",
+      "department": "Hr",
+      "address": "Dighi, Pune",
+      "email": "nidisha@gmail.com"
+    },
+    {
+      "id": "7708",
+      "name": "dilip ",
+      "email": "admin@hrms.com",
+      "password": "sdfsdf",
+      "role": "employee",
+      "phoneno": "4573495739568",
+      "department": "it",
+      "address": "mumbai"
+    },
+    {
+      "id": "954a",
+      "name": "Generic H2 ",
+      "email": "test2@gmail.com",
+      "password": "2324",
+      "role": "employee",
+      "phoneno": "645641",
+      "department": "it",
+      "address": "Dighi, Pune"
+    },
+    {
+      "id": "acfa",
+      "name": "dilip",
+      "email": "admin@hrms.com",
+      "password": "12345",
+      "role": "employee",
+      "phoneno": "1234432101",
+      "department": "Support",
+      "address": "Dighi, Pune"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { backgroundStyle } from "../customstyles";
+import { api } from "../services/api";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { login } from "../services/authslice";
+
 const Login = () => {
   // the below are used to set the backgrund style
-  const backgroundStyle = {
-    background: "linear-gradient(135deg, #0033a0 0%, #00a4bd 100%)",
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
+  const dispatch = useDispatch();
   const carouselImageSyle = {
     height: "400px",
     objectFit: "cover",
@@ -27,6 +27,7 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const handleInputChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setForm((prev) => ({
       ...prev,
@@ -38,8 +39,41 @@ const Login = () => {
     navigate("/signup");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const resp = await api.getAllEmployee();
+
+    if (resp.success) {
+      console.log("Full Response:", resp);
+      const users = resp.data;
+      const matchedUser = users.find(
+        (user) =>
+          user.email === form.userEmail && user.password === form.password
+      );
+      if (matchedUser) {
+        dispatch(login(matchedUser));
+        toast.success("User login successfully");
+        console.log(`Logged in as: ${matchedUser.name}`);
+        // Redirect or do something after successful login
+        navigate("/dashborad");
+      } else {
+        toast.error("Failed to login: Invalid credentials");
+      }
+      // toast.success("User fetched successfully ", resp.data);
+    } else {
+      console.error(`Error Response ${resp.error}`);
+      toast.error("Failed to fetch users");
+    }
+
+    // for (const user of resp.data) {
+    //   if (form.userEmail === user.email && form.password === user.password) {
+    //     toast.success("User login successfully");
+    //     return;
+    //   } else {
+    //     toast.error("Failed  to login invalid credentails");
+    //   }
+    //   console.log(`the user data is ${user.name}`);
+    // }
   };
 
   return (
@@ -154,9 +188,10 @@ const Login = () => {
                     <input
                       type="email"
                       className="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="Enter Email"
+                      id="userEmail"
+                      name="userEmail"
+                      value={form.userEmail}
+                      placeholder="Enter Email address"
                       onChange={handleInputChange}
                     />
                   </div>
@@ -167,11 +202,12 @@ const Login = () => {
                       className="form-control"
                       id="password"
                       name="password"
+                      value={form.password}
                       placeholder="Enter Password"
                       onChange={handleInputChange}
                     />
                   </div>
-                  <div className="mb-3">
+                  {/* <div className="mb-3">
                     <label htmlFor="role" className="form-label">
                       Login As
                     </label>
@@ -185,7 +221,8 @@ const Login = () => {
                       <option value="employee">Employee</option>
                       <option vlaue="admin">Admin</option>
                     </select>
-                  </div>
+                  </div> */}
+
                   <label
                     className="text-primary mb-4"
                     onClick={handleRegisterClick}
