@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# HRMS Application
+
+## Project Overview
+The Human Resource Management System (HRMS) is a comprehensive web application designed to streamline and automate HR processes within an organization. This application provides a user-friendly interface for managing employee data, authentication, and various HR operations.
+
+## Key Features
+- **User Authentication**: Secure login and signup functionality
+- **Dashboard**: Centralized view of HR metrics and important information
+- **Employee Management**: Tools for managing employee records and information
+- **Responsive Design**: Mobile-friendly interface accessible across devices
+
+## Technology Stack
+- **Frontend**: React.js, CSS
+- **State Management**: Redux (with Redux Toolkit)
+- **Authentication**: JWT-based authentication
+- **API Integration**: RESTful API services
+- **Build Tools**: Create React App, npm
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

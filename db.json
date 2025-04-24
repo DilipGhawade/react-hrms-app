@@ -14,7 +14,7 @@
       "id": "114b",
       "name": "Nidisha",
       "password": "12345",
-      "role": "",
+      "role": "hr",
       "phoneno": "7090909090",
       "department": "Hr",
       "address": "Dighi, Pune",
@@ -24,7 +24,7 @@
       "id": "7708",
       "name": "dilip ",
       "email": "admin@hrms.com",
-      "password": "sdfsdf",
+      "password": "12345",
       "role": "employee",
       "phoneno": "4573495739568",
       "department": "it",
@@ -49,6 +49,179 @@
       "phoneno": "1234432101",
       "department": "Support",
       "address": "Dighi, Pune"
+    },
+    {
+      "id": "4da0",
+      "name": "Nidisha Ghawade",
+      "email": "nidisha@gmail.com",
+      "password": "12345",
+      "role": "employee",
+      "phoneno": "8970909090",
+      "department": "it",
+      "address": "Delhi"
+    },
+    {
+      "id": "c608",
+      "name": "iosStudy",
+      "email": "ghawadedilip07@gmail.com",
+      "password": "12345",
+      "role": "employee",
+      "phoneno": "90909090990",
+      "department": "it",
+      "address": "mumbai"
+    },
+    {
+      "id": "7efe",
+      "name": "The User Added form hr",
+      "email": "tuafh@gmal.com",
+      "password": "12345",
+      "role": "employee",
+      "phoneno": "0000000000",
+      "department": "it",
+      "address": "Nagar"
+    },
+    {
+      "id": "260f",
+      "name": "Pradeep",
+      "email": "pradeep@gmail.com",
+      "password": "12345",
+      "role": "employee",
+      "phoneno": "9090909090",
+      "department": "it",
+      "address": "Beed"
+    }
+  ],
+  "punches": [
+    {
+      "id": "7708",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-23T09:23",
+      "type": "punchin",
+      "location": "pune",
+      "notes": "This is for testing purpose",
+      "createdAt": "2025-04-23T04:06:14.695Z"
+    },
+    {
+      "id": "7708",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-24T06:31",
+      "type": "punchin",
+      "location": "new delhi",
+      "notes": "na",
+      "createdAt": "2025-04-24T01:06:19.985Z"
+    },
+    {
+      "id": "7708",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-24T07:14",
+      "type": "punchout",
+      "location": "",
+      "notes": "",
+      "createdAt": "2025-04-24T01:44:35.605Z"
+    },
+    {
+      "id": "114b",
+      "userId": "114b",
+      "userName": "Nidisha",
+      "dateTime": "2025-04-25T08:36",
+      "type": "punchin",
+      "location": "",
+      "notes": "dsf",
+      "createdAt": "2025-04-24T03:06:56.088Z",
+      "reason": ""
+    },
+    {
+      "id": "114b",
+      "userId": "114b",
+      "userName": "Nidisha",
+      "dateTime": "2025-04-25T08:56",
+      "type": "punchin",
+      "location": "",
+      "notes": "",
+      "createdAt": "2025-04-24T03:26:51.293Z",
+      "reason": ""
+    },
+    {
+      "id": "114b",
+      "userId": "114b",
+      "userName": "Nidisha",
+      "dateTime": "2025-04-22T08:57",
+      "type": "punchout",
+      "location": "",
+      "notes": "",
+      "createdAt": "2025-04-24T03:27:13.778Z",
+      "reason": ""
+    },
+    {
+      "id": "1",
+      "userId": "1",
+      "userName": "Dilip",
+      "dateTime": "2025-04-24T19:34",
+      "type": "punchin",
+      "location": "pune",
+      "notes": "",
+      "createdAt": "2025-04-24T14:05:02.331Z",
+      "reason": ""
+    }
+  ],
+  "leaves": [
+    {
+      "id": "7",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-24T06:42",
+      "type": "Causel Leave",
+      "reason": "Pl",
+      "notes": "",
+      "createdAt": "2025-04-24T01:12:44.219Z",
+      "status": "Approved"
+    },
+    {
+      "id": "8",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-24T06:42",
+      "type": "Earned Leave",
+      "reason": "El",
+      "notes": "",
+      "createdAt": "2025-04-24T01:14:51.141Z",
+      "status": "Canceled"
+    },
+    {
+      "id": "9",
+      "userId": "7708",
+      "userName": "dilip ",
+      "dateTime": "2025-04-24T06:42",
+      "type": "Earned Leave",
+      "reason": "El",
+      "notes": "",
+      "createdAt": "2025-04-24T01:14:51.141Z",
+      "status": "Pending"
+    },
+    {
+      "id": "114b",
+      "userId": "114b",
+      "userName": "Nidisha",
+      "dateTime": "2025-04-22T08:41",
+      "type": "Earned Leave",
+      "location": "",
+      "notes": "",
+      "createdAt": "2025-04-24T03:11:53.554Z",
+      "reason": "EL"
+    },
+    {
+      "id": "1",
+      "userId": "1",
+      "userName": "Dilip",
+      "dateTime": "2025-04-26T19:35",
+      "type": "Earned Leave",
+      "location": "",
+      "notes": "",
+      "createdAt": "2025-04-24T14:05:19.296Z",
+      "reason": ""
     }
   ]
 }
